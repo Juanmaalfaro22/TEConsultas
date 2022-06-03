@@ -1,0 +1,53 @@
+/* Inicio de sesion*/
+.background-login {
+  background-image: url("/recursos/img/background-inicio.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.container-login {
+  height: 80vh;
+  padding-top: 8rem;
+}
+
+.container__line {
+  margin: 0 8.5rem;
+}
+
+.container__left h4,
+.container__rigth h4 {
+  margin-bottom: 2rem;
+}
+
+.container__left span {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.form input {
+  width: 446px;
+  height: 48px;
+  left: 738px;
+  top: 697px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.tipoUsuario > label{
+  color: #FFF;
+  margin-right: 1rem;
+}
+
+.tipoUsuario > input{
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
+
+.form > a{
+  height: 50px;
+}
+
+.container__rigth a{
+  margin-bottom: 1rem;
+}

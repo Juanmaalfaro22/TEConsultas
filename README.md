@@ -1,2 +1,2 @@
 # TEConsultas
- Prototipo de aplicacion web dirigida a la Telemedicina
+Aplicación Web para consultas en línea con distintos especialistas del área de la salud.

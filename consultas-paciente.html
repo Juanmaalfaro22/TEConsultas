@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEConsultas</title>
+    
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/consultas-paciente.css" />
+    <link rel="stylesheet" href="css/calendar.css">
+    <script src="js/consultas-paciente.js" defer></script>
+    <!-- Cargamos nuestras fontsa-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+</head>
+<body>
+    
+    <div class="container">
+
+        
+        <div class="menu flex">
+            <div class="menu-items flex">
+                <a href="index.html"><img src="./recursos/img/logo.png" alt="logo"></a>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="registros.html">Cerrar sesion</a>
+                </nav>
+            </div>
+        </div>
+
+        <main>
+            <div class="container-main flex">
+                <div class="menu-container-main flex">
+                    <div class="info-paciente flex">
+                        <img src="/recursos/img/imgPaciente.jpg" alt="pp-paciente">
+                        <p id="nombreLeft">Jesús López</p>
+                        <p id="correoLeft">jesuslopez19@gmail.com</p>
+                    </div>
+                    <div class="items flex">
+                        <a id="iconAccount">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/dklbhvrt.json"
+                                trigger="hover"
+                                colors="primary:#ffffff"
+                                style="width:60px;height:60px;">
+                            </lord-icon>
+                        </a> 
+                        
+                        <a id="iconCalendario">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/drtetngs.json"
+                                trigger="hover"
+                                colors="primary:#ffffff"
+                                style="width:60px;height:60px;">
+                            </lord-icon>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="container-item flex">
+                    <div class="container_cons_rec flex none">
+                        <div class="container_consultas">
+                            <p>CONSULTAS</p>
+                            <div class="consultas flex">
+                                <div class="carta_consulta flex">
+                                    <img src="/recursos/img/image 3.png" alt="doctor">
+                                    <div class="info-carta-consulta flex">
+                                        <p>Juan Manuel Alfaro Aguilera</p>
+                                        <p>Fecha: <span>1/May/2022</span></p>
+                                        <button class="btn-ir-cons" >Ir consulta</button>
+                                    </div>
+                                </div>
+
+                                <div class="carta_consulta flex">
+                                    <img src="/recursos/img/image 3.png" alt="doctor">
+                                    <div class="info-carta-consulta flex">
+                                        <p>Juan Manuel Alfaro Aguilera</p>
+                                        <p>Fecha: <span>1/May/2022</span></p>
+                                        <button class="btn-ir-cons" >Ir consulta</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="container_recetas">
+                            <p>RECETAS</p>
+                            <div class="recetas">
+                                <div class="carta_receta flex">
+                                    <img src="/recursos/img/receta_imagen.png" alt="receta_imagen">
+                                    <div class="info-carta-receta flex">
+                                        <p>Receta del doctor: </p>
+                                        <button class="btn-ir-rec" >Ver</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="informacion_paciente flex"id="configuracion_cuenta">
+                        <p>Configuracion de la cuenta</p>
+
+                        <form class="form_paciente flex row" id="form_cuenta">
+                            <div class="labels flex column centerX">
+                                <span>Nombre</span>
+                                <span>Celular</span>
+                                <span>Correo</span>
+                                <span>Dirección</span>
+                                <span>Fecha de Nacimiento</span>
+                                <span>Sexo</span>
+                                <span>Discapacidad</span>
+                                <span>Tipo de sangre</span>
+                                <span id="fotoSpan">Subir foto del perfil</span>
+                            </div>
+
+                            <div class="inputs flex column centerX">
+                                <input type="text" value="Jesús López" readonly="true" id="nombre"/>
+                                <input type="tel" placeholder="8712397966" id="celular" />
+                                <input type="text" name="correo" id="correo" value="jesuslopez19@gmail.com" readonly="true"/>
+                                <input type="text" name="direccion" id="direccion" placeholder="Col. Centro #345,  Gomez Palacio"/>
+                                <input type="date" name="nacimiento" id="fechaNac" value="1995-01-01">
+                                <p id="idSexo">Sexo: M <input type="radio" name="sexo" id="sexo1" value="M" checked > F <input type="radio" name="sexo" id="sexo2" value="F" ></p>
+                                <p id="idSexo">Discapacidad: Si <input type="radio" name="discapacidad" id="discapacidad1" value="Si" > No <input type="radio" name="discapacidad" id="discapacidad2" value="No" checked ></p>
+                                <input type="text" name="tipo_sangre" id="tipoSangre" placeholder="B+" />
+                                <input type="file" name="foto" id="foto" />
+                            </div>
+                        </form>
+
+                        <button class="btn-guardar" id="btnGuardar"> GUARDAR</button>
+                    </div>
+
+                        
+                    
+                    
+
+                    
+                    
+                </div>
+                
+            </div>
+        </main>
+        
+        
+        <div class="background">
+            <img src="./recursos/img/FondoRegistro.jpg" alt="fondo">
+        </div>
+
+    </div>
+    
+    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+</body>
+</html>

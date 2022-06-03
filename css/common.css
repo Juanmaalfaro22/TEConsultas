@@ -1,0 +1,60 @@
+/*
+    En este archivo estan las propiedades que se repiten una y otra vez normalmente en los proyectos web.
+*/
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.centerX {
+  justify-content: center;
+}
+
+.centerY {
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.grid {
+  display: grid;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.black {
+  color: #030419;
+}
+
+.black_text {
+  color: #000000;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.imgRedonda {
+  border-radius: 180px;
+  background-color: black;
+}
+
+.tamIconos{
+  width: 2.5rem;/*40px*/
+}
+
+.ocultar{
+  display: none;
+}
